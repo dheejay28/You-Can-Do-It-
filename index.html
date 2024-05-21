@@ -9,11 +9,34 @@
 <body>
     <div class="container">
         <h1 id="message" style="display: none;"></h1>
-        <button id="revealButton" onclick="revealMessage()">Click me</button>
+        <button id="revealButton" onclick="revealMessage()">See More</button>
         <button id="contactButton" onclick="contactInfo()" style="display: none;">Email Me</button>
-        <button id="nglButton" onclick="openNGL()" style="display: none;">Send me anonymous message</button>
+        <button id="nglButton" onclick="openNGL()" style="display: none;"Send me Anonymous Message</button>
+        <button id="repliesButton" onclick="openReplies()">Replies</button>
     </div>
     <audio id="typingSound" src="Typing_Sound.mp3" preload="auto"></audio>
+    <div id="replyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Replies</h2>
+            <div class="reply-gallery">
+                <!-- Example replies with images and text -->
+                <div class="reply">
+                    <img src="reply1.jpeg" alt="Reply 1">
+                    <p>This is the text for reply 1. It can be a brief description or an actual reply.</p>
+                </div>
+                <div class="reply">
+                    <img src="reply2.jpeg" alt="Reply 2">
+                    <p>This is the text for reply 2. It can be a brief description or an actual reply.</p>
+                </div>
+                <div class="reply">
+                    <img src="reply3.jpeg" alt="Reply 3">
+                    <p>This is the text for reply 3. It can be a brief description or an actual reply.</p>
+                </div>
+                <!-- Add more replies as needed -->
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
