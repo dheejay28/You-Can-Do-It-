@@ -3,7 +3,6 @@ let index = 0;
 
 function revealMessage() {
     document.getElementById("revealButton").style.display = "none";
-    document.getElementById("contactButton").style.display = "inline-block";
     document.getElementById("message").style.display = "block";
     typeMessage();
 }
@@ -13,6 +12,8 @@ function typeMessage() {
         document.getElementById("message").innerHTML += message.charAt(index);
         index++;
         setTimeout(typeMessage, 100); // Adjust typing speed (milliseconds)
+    } else {
+        document.getElementById("contactButton").style.display = "inline-block";
     }
 }
 
@@ -24,6 +25,6 @@ function contactInfo() {
     const primaryEmail = 'deejay.cristobal@protonmail.com';
     const secondaryEmail = 'deejay.deejay.cristobal@protonmail.com';
     const emailBody = 'Hello,';
-    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=An%20Appreciation&body=${emailBody}`;
+    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=Contact%20Information&body=${emailBody}`;
     window.location.href = email;
 }
