@@ -18,7 +18,7 @@ function typeMessage() {
         setTimeout(typeMessage, typingDelay);
     } else {
         document.getElementById("contactButton").style.display = "inline-block";
-        document.getElementById("nglButton").style.display = "inline-block";
+        document.getElementById("nglButton").style.display = "inline-block"; // Display NGL button
     }
 }
 
@@ -35,5 +35,5 @@ function contactInfo() {
 }
 
 function openNGL() {
-    window.open('https://ngl.link/deejay81979', '_blank');
+    window.open('https://ngl.com/dj28', '_blank');
 }
