@@ -11,7 +11,7 @@ function exitPage() {
 function contactInfo() {
     const primaryEmail = 'deejay.cristobal@protonmail.com';
     const secondaryEmail = 'deejay.deejay.cristobal@protonmail.com';
-    const emailBody = ' ';
+    const emailBody = 'Hello, ';
     const email = `mailto:${primaryEmail},${secondaryEmail}?subject=Contact%20Information&body=${emailBody}`;
     window.location.href = email;
 }
