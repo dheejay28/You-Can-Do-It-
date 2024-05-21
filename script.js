@@ -17,8 +17,7 @@ function typeMessage() {
         index++;
         setTimeout(typeMessage, typingDelay);
     } else {
-        document.getElementById("contactButton").style.display = "inline-block";
-        document.getElementById("nglButton").style.display = "inline-block"; // Display NGL button
+        document.getElementById("messageButtons").style.display = "flex"; // Display message buttons
     }
 }
 
@@ -30,12 +29,12 @@ function contactInfo() {
     const primaryEmail = 'deejay.cristobal@protonmail.com';
     const secondaryEmail = 'deejay.deejay.cristobal@protonmail.com';
     const emailBody = 'Hello,';
-    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=Contact%20Information&body=${emailBody}`;
+    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=A Message%20of Appreciation &body=${emailBody}`;
     window.location.href = email;
 }
 
 function openNGL() {
-    window.open('https://ngl.link/deejay81979', '_blank');
+    window.open('https://ngl.com/dj28', '_blank');
 }
 
 function openReplies() {
@@ -48,10 +47,28 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
+function showReply(imageSrc, text) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalText = document.getElementById('modalText');
+    modalImage.src = imageSrc;
+    modalText.textContent = text;
+    modal.style.display = 'block';
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+}
+
 // Close modal when clicking outside of it
 window.onclick = function(event) {
-    const modal = document.getElementById('replyModal');
-    if (event.target == modal) {
-        modal.style.display = 'none';
+    const replyModal = document.getElementById('replyModal');
+    const imageModal = document.getElementById('imageModal');
+    if (event.target == replyModal) {
+        replyModal.style.display = 'none';
+    }
+    if (event.target == imageModal) {
+        imageModal.style.display = 'none';
     }
 }
