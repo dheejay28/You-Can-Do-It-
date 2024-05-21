@@ -35,5 +35,5 @@ function contactInfo() {
 }
 
 function openNGL() {
-    window.open('https://ngl.com/dj28', '_blank');
+    window.open('https://ngl.link/deejay81979', '_blank');
 }
