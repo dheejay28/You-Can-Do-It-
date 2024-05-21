@@ -10,6 +10,9 @@ function exitPage() {
 }
 
 function contactInfo() {
-    const email = 'mailto:deejay.cristobal@protonmail.com?subject=Contact%20Information&body=Hello,';
+    const primaryEmail = 'deejay.cristobal@protonmail.com';
+    const secondaryEmail = 'deejay.deejay.cristobal@protonmail.com';
+    const emailBody = '';
+    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=Contact%20Information&body=${emailBody}`;
     window.location.href = email;
 }
