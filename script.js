@@ -18,6 +18,7 @@ function typeMessage() {
         setTimeout(typeMessage, typingDelay);
     } else {
         document.getElementById("contactButton").style.display = "inline-block";
+        document.getElementById("nglButton").style.display = "inline-block";
     }
 }
 
@@ -31,4 +32,8 @@ function contactInfo() {
     const emailBody = 'Hello,';
     const email = `mailto:${primaryEmail},${secondaryEmail}?subject=Contact%20Information&body=${emailBody}`;
     window.location.href = email;
+}
+
+function openNGL() {
+    window.open('https://ngl.link/your_ngl_link', '_blank');
 }
