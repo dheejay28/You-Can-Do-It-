@@ -1,33 +1,39 @@
-const message = "You can do it! Don't Give Up!";
-let index = 0;
-const typingSound = document.getElementById('typingSound');
-
-function revealMessage() {
-    document.getElementById("revealButton").style.display = "none";
-    document.getElementById("message").style.display = "block";
-    typeMessage();
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
 }
 
-function typeMessage() {
-    if (index < message.length) {
-        document.getElementById("message").innerHTML += message.charAt(index);
-        typingSound.currentTime = 0; // Rewind to start
-        typingSound.play(); // Play sound
-        index++;
-        setTimeout(typeMessage, 100); // Adjust typing speed (milliseconds)
-    } else {
-        document.getElementById("contactButton").style.display = "inline-block";
-    }
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-function exitPage() {
-    document.querySelector('.container').style.display = 'none';
+h1 {
+    margin-bottom: 20px;
+    color: #333;
 }
 
-function contactInfo() {
-    const primaryEmail = 'deejay.cristobal@protonmail.com';
-    const secondaryEmail = 'deejay.deejay.cristobal@protonmail.com';
-    const emailBody = 'Hello,';
-    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=An%20Appreciation&body=${emailBody}`;
-    window.location.href = email;
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
