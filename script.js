@@ -37,3 +37,21 @@ function contactInfo() {
 function openNGL() {
     window.open('https://ngl.link/deejay81979', '_blank');
 }
+
+function openReplies() {
+    const modal = document.getElementById('replyModal');
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    const modal = document.getElementById('replyModal');
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('replyModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
