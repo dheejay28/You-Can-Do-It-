@@ -10,10 +10,13 @@
     <div class="container">
         <h1 id="message" style="display: none;"></h1>
         <button id="revealButton" onclick="revealMessage()">Click me</button>
+        <div id="moreButtonContainer" style="display: none;">
+            <button id="moreButton" onclick="showMoreOptions()">More</button>
+        </div>
         <div id="messageButtons" style="display: none;">
-            <button id="contactButton" onclick="contactInfo()">Send Email</button>
+            <button id="contactButton" onclick="contactInfo()">Send Me Email</button>
             <button id="nglButton" onclick="openNGL()">Send Me Anonymous Message</button>
-            <button id="repliesButton" onclick="openReplies()">Replies</button>
+            <button id="repliesButton" onclick="openReplies()">NGL Replies</button>
         </div>
     </div>
     <audio id="typingSound" src="Typing_Sound.mp3" preload="auto"></audio>
@@ -22,9 +25,9 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <h2>Replies</h2>
             <div class="reply-gallery">
-                <div class="reply" onclick="showReply('reply1.jpeg', 'Well, for me, hindi naman siguro basehan ang itsura.Aanhin mo yung may itsura, kung patapon naman ang ugali.')">
+                <div class="reply" onclick="showReply('reply1.jpeg','Well, for me, hindi naman siguro basehan ang itsura.Aanhin mo yung may itsura, kung patapon naman ang ugali.')">
                     <img src="reply1.jpeg" alt="Reply 1">
-                    <p> Well, for me, hindi naman siguro basehan ang itsura.Aanhin mo yung may itsura, kung patapon naman ang ugali.</p>
+                    <p>Well, for me, hindi naman siguro basehan ang itsura.Aanhin mo yung may itsura, kung patapon naman ang ugali.</p>
                 </div>
                 <div class="reply" onclick="showReply('reply2.jpeg', 'This is the text for reply 2. It can be a brief description or an actual reply.')">
                     <img src="reply2.jpeg" alt="Reply 2">
