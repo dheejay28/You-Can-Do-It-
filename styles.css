@@ -58,6 +58,13 @@ button:hover {
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
 }
 
 .close {
@@ -85,9 +92,22 @@ button:hover {
     max-width: 100%;
     height: auto;
     border: 1px solid #ddd;
+    cursor: pointer;
 }
 
 .reply p {
     margin-top: 10px;
     color: #333;
+}
+
+/* New styles for vertical button layout */
+#messageButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#messageButtons button {
+    width: 200px; /* Adjust the width as needed */
+    margin-bottom: 10px; /* Space between buttons */
 }
