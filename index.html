@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You Can Do I!</title>
+    <title>You Can Do It!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <h1 id="message" style="display: none;">You can do it!</h1>
         <div class="overlay-container">
             <button id="revealButton" onclick="revealMessage()">Click me</button>
-            <span class="overlay-text">So don't give up!</span>
+            <span id="overlayText" class="overlay-text" style="display: none;">So don't give up!</span>
         </div>
         <button id="exitButton" onclick="exitPage()" style="display: none;">Exit</button>
         <button id="contactButton" onclick="contactInfo()" style="display: none;">Message Me</button>
