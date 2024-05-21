@@ -100,7 +100,6 @@ button:hover {
     color: #333;
 }
 
-/* New styles for vertical button layout */
 #messageButtons {
     display: flex;
     flex-direction: column;
