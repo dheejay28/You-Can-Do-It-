@@ -17,8 +17,13 @@ function typeMessage() {
         index++;
         setTimeout(typeMessage, typingDelay);
     } else {
-        document.getElementById("messageButtons").style.display = "flex"; // Display message buttons
+        document.getElementById("moreButtonContainer").style.display = "block"; // Display More button
     }
+}
+
+function showMoreOptions() {
+    document.getElementById("moreButton").style.display = "none";
+    document.getElementById("messageButtons").style.display = "flex";
 }
 
 function exitPage() {
@@ -29,7 +34,7 @@ function contactInfo() {
     const primaryEmail = 'deejay.cristobal@protonmail.com';
     const secondaryEmail = 'deejay.deejay.cristobal@protonmail.com';
     const emailBody = 'Hello,';
-    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=A Message%20of Appreciation &body=${emailBody}`;
+    const email = `mailto:${primaryEmail},${secondaryEmail}?subject= Just a%20Message &body=${emailBody}`;
     window.location.href = email;
 }
 
