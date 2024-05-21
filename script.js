@@ -1,5 +1,6 @@
 const message = "You can do it! Don't Give Up!";
 let index = 0;
+const typingSound = document.getElementById('typingSound');
 
 function revealMessage() {
     document.getElementById("revealButton").style.display = "none";
@@ -10,8 +11,10 @@ function revealMessage() {
 function typeMessage() {
     if (index < message.length) {
         document.getElementById("message").innerHTML += message.charAt(index);
+        typingSound.currentTime = 0; // Rewind to start
+        typingSound.play(); // Play sound
         index++;
-        setTimeout(typeMessage, 150); // Adjust typing speed (milliseconds)
+        setTimeout(typeMessage, 100); // Adjust typing speed (milliseconds)
     } else {
         document.getElementById("contactButton").style.display = "inline-block";
     }
