@@ -23,6 +23,11 @@ h1 {
     color: #333;
 }
 
+h2.datetime {
+    margin-bottom: 20px;
+    color: #333;
+}
+
 button {
     padding: 10px 20px;
     margin: 5px;
@@ -115,10 +120,4 @@ button:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-.datetime {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
 }
