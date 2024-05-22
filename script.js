@@ -1,7 +1,7 @@
 const message = "You can do it! Don't Give Up!";
 let index = 0;
 const typingSound = document.getElementById('typingSound');
-const typingDelay = 375; // Typing delay in milliseconds to span 9 seconds
+const typingDelay = 500; // Typing delay in milliseconds to span 9 seconds
 
 function revealMessage() {
     document.getElementById("revealButton").style.display = "none";
@@ -24,6 +24,7 @@ function typeMessage() {
 function showMoreOptions() {
     document.getElementById("moreButtonContainer").style.display = "none"; // Hide More button container
     document.getElementById("messageButtons").style.display = "flex"; // Display message buttons
+    document.getElementById("messageButtons").style.flexDirection = "column"; // Align buttons vertically
 }
 
 function contactInfo() {
@@ -62,18 +63,3 @@ function closeImageModal() {
     const modal = document.getElementById('imageModal');
     modal.style.display = 'none';
 }
-
-function updateDateTime() {
-    const now = new Date().toLocaleString('en-PH', {
-        timeZone: 'Asia/Manila',
-        dateStyle: 'full',
-        timeStyle: 'long'
-    });
-    document.getElementById('datetime').innerText = '   ${now}`;
-}
-
-// Update the date and time every second
-setInterval(updateDateTime, 1000);
-
-// Initial call to display the date and time immediately on load
-updateDateTime();
