@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+<div class="login-container">
+        <h2 id="datetime" class="datetime"></h2>
         <h1 id="message" style="display: none;"></h1>
-        <button id="revealButton" onclick="revealMessage()">Click me</button>
+        <button id="revealButton" class="btn-primary" onclick="revealMessage()">Click me</button>
         <div id="moreButtonContainer" style="display: none;">
-            <button id="moreButton" onclick="showMoreOptions()">More</button>
+            <button id="moreButton" class="btn-secondary" onclick="showMoreOptions()">More</button>
         </div>
         <div id="messageButtons" style="display: none;">
-            <button id="contactButton" onclick="contactInfo()">Send Me Email</button>
-            <button id="nglButton" onclick="openNGL()">Send Me Anonymous Message</button>
-            <button id="repliesButton" onclick="openReplies()">NGL Replies</button>
+            <button id="contactButton" class="btn-secondary" onclick="contactInfo()">Send Me Email</button>
+            <button id="nglButton" class="btn-secondary" onclick="openNGL()">Send Me Anonymous Message</button>
+            <button id="repliesButton" class="btn-secondary" onclick="openReplies()">NGL Replies</button>
         </div>
-        <div id="datetime" class="datetime"></div>
     </div>
     <audio id="typingSound" src="Typing_Sound.mp3" preload="auto"></audio>
     <div id="replyModal" class="modal">
