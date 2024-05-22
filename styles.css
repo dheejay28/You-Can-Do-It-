@@ -5,7 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #0B2F3A; /* Change background color */
+    background: url('bg.jpeg') no-repeat center center fixed; /* Background image */
+    background-size: cover;
     font-family: Arial, sans-serif;
 }
 
@@ -14,7 +15,7 @@ body {
     padding: 20px;
     border: 2px solid #000;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -100,7 +101,6 @@ button:hover {
     color: #333;
 }
 
-/* New styles for vertical button layout */
 #messageButtons {
     display: flex;
     flex-direction: column;
@@ -110,4 +110,16 @@ button:hover {
 #messageButtons button {
     width: 200px; /* Adjust the width as needed */
     margin-bottom: 10px; /* Space between buttons */
+}
+
+#moreButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.datetime {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
 }
