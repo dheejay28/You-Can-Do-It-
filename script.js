@@ -28,7 +28,7 @@ function showMoreOptions() {
 
 function contactInfo() {
     const primaryEmail = 'deejay.cristobal@protonmail.com';
-    const secondaryEmail = 'dheejaycristobal2@gmail.com';
+    const secondaryEmail = 'dheejaycristobal28@gmail.com';
     const emailBody = 'Hello,';
     const email = `mailto:${primaryEmail},${secondaryEmail}?subject=Contact%20Information&body=${emailBody}`;
     window.location.href = email;
@@ -68,7 +68,7 @@ function updateDateTime() {
         dateStyle: 'full',
         timeStyle: 'long'
     });
-    document.getElementById('datetime').innerText = ` ${now}`;
+    document.getElementById('datetime').innerText = `${now}`;
 }
 
 // Update the date and time every second
