@@ -1,55 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You Can Do It!</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encouragement Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1 id="message" style="display: none;"></h1>
-        <button id="revealButton" class="btn-primary" onclick="revealMessage()">Continue</button>
-        <div id="moreButtonContainer" style="display: none;">
-            <button id="moreButton" class="btn-secondary" onclick="showMoreOptions()">More</button>
-        </div>
-        <div id="messageButtons" style="display: none;">
-            <button id="contactButton" class="btn-secondary" onclick="contactInfo()">Send Me Email</button>
-            <button id="nglButton" class="btn-secondary" onclick="openNGL()">Send Me Anonymous Message</button>
-            <button id="repliesButton" class="btn-secondary" onclick="openReplies()">NGL Replies</button>
-        </div>
+  <button id="continueBtn" onclick="expandBox()">Continue</button>
+  <div id="expandableBox" class="hidden">
+    <p id="typingEffect"></p>
+  </div>
+  <button id="moreBtn" onclick="openEmail()">More</button>
+  <button id="anonymousMsgBtn" onclick="sendAnonymousMessage()">Send me anonymous message</button>
+  <button id="nglReplyBtn" onclick="showNglReply()">NGL Replies</button>
+  <div id="nglReplyContent" class="hidden">
+    <img src="Reply1.jpeg" alt="Reply1" onclick="showReplyPopup()">
+    <div id="replyPopup" class="hidden">
+      <img src="reply1.jpeg" alt="Reply1">
+      <p>This is the reply text.</p>
     </div>
-    <audio id="typingSound" src="Typing_Sound.mp3" preload="auto"></audio>
-    <div id="replyModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Replies</h2>
-            <div class="reply-gallery">
-                <div class="reply" onclick="showReply('reply1.jpeg', 'Well, for me, hindi naman siguro basehan ang itsura. Aanhin mo yung may itsura, kung patapon naman ang ugali.')">
-                    <img src="reply1.jpeg" alt="Reply 1">
-                </div>
-                <div class="reply" onclick="showReply('reply2.jpeg', 'uhm, hindi ko alam kung sino, ung ngayon, ung ano basta nagpepeeling lotion na siya. And the other one is siyempre one of the buraots, Mel.')">
-                    <img src="reply2.jpeg" alt="Reply 2">
-                </div>
-                <div class="reply" onclick="showReply('reply3.jpeg', 'sino sa kanila? Pero siken joy muna.')">
-                    <img src="reply3.jpeg" alt="Reply 3">
-                </div>
-                <div class="reply" onclick="showReply('reply4.jpeg', 'wala, para kase silang nasa formal meeting kapag kausap ako, kaya ayan, wala akong kausap.')">
-                    <img src="reply4.jpeg" alt="Reply 4">
-                </div>
-                <div class="reply" onclick="showReply('reply5.jpeg', 'Hello, Goodbye!')">
-                    <img src="reply5.jpeg" alt="Reply 5">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="imageModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeImageModal()">&times;</span>
-            <img id="modalImage" src="" alt="Reply Image">
-            <p id="modalText"></p>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
