@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encouragement Page</title>
+  <title>Interactive Page</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button id="continueBtn" onclick="expandBox()">Continue</button>
-  <div id="expandableBox" class="hidden">
-    <p id="typingEffect"></p>
-  </div>
-  <button id="moreBtn" onclick="openEmail()">More</button>
-  <button id="anonymousMsgBtn" onclick="sendAnonymousMessage()">Send me anonymous message</button>
-  <button id="nglReplyBtn" onclick="showNglReply()">NGL Replies</button>
-  <div id="nglReplyContent" class="hidden">
-    <img src="Reply1.jpeg" alt="Reply1" onclick="showReplyPopup()">
-    <div id="replyPopup" class="hidden">
-      <img src="reply1.jpeg" alt="Reply1">
-      <p>This is the reply text.</p>
+  <div class="container">
+    <button id="continueBtn">Continue</button>
+    <div id="messageBox" class="hidden"></div>
+    <button id="moreBtn">More</button>
+    <button id="anonymousBtn">Send me anonymous message</button>
+    <button id="replyBtn">Ngl Replies</button>
+    <div id="replyModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="reply1.jpeg" alt="Reply1" class="reply-img">
+        <p class="reply-text">This is a sample reply.</p>
+      </div>
     </div>
   </div>
+
+  <audio id="typingSound" src=Ttyping_Sound.mp3"></audio>
   <script src="script.js"></script>
 </body>
 </html>
