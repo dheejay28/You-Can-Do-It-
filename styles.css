@@ -5,17 +5,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #6c75d5;
-    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Aesthetic light background color */
+    font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
 .login-container {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 350px;
+    max-width: 90%;
 }
 
 .datetime {
@@ -36,6 +38,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary {
