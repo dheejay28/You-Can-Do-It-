@@ -35,7 +35,8 @@ function contactInfo() {
 }
 
 function openNGL() {
-    window.open('https://ngl.link/deejay81979', '_blank');
+    const nglLink = 'https://ngl.link/deejay81979'; // Ensure the link is correctly formatted
+    window.open(nglLink, '_blank');
 }
 
 function openReplies() {
@@ -68,7 +69,7 @@ function updateDateTime() {
         dateStyle: 'full',
         timeStyle: 'long'
     });
-    document.getElementById('datetime').innerText = `${now}`;
+    document.getElementById('datetime').innerText = '   ${now}`;
 }
 
 // Update the date and time every second
