@@ -32,7 +32,7 @@ function exitPage() {
 
 function contactInfo() {
     const primaryEmail = 'deejay.cristobal@protonmail.com';
-    const secondaryEmail = 'deejay.deejay.cristobal@protonmail.com';
+    const secondaryEmail = 'dheejaycristobal28@gmail.com';
     const emailBody = 'Hello,';
     const email = `mailto:${primaryEmail},${secondaryEmail}?subject=Contact%20Information&body=${emailBody}`;
     window.location.href = email;
@@ -81,7 +81,7 @@ window.onclick = function(event) {
 // Function to update the Philippine time and date
 function updateDateTime() {
     const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" });
-    document.getElementById('datetime').innerText = `Current Philippine Date and Time: ${now}`;
+    document.getElementById('datetime').innerText = ' ${now}`;
 }
 
 // Update the date and time every second
