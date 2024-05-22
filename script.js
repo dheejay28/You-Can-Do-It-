@@ -17,13 +17,13 @@ function typeMessage() {
         index++;
         setTimeout(typeMessage, typingDelay);
     } else {
-        document.getElementById("moreButtonContainer").style.display = "block"; // Display More button
+        document.getElementById("moreButtonContainer").style.display = "block"; // Display More button container
     }
 }
 
 function showMoreOptions() {
-    document.getElementById("moreButton").style.display = "none";
-    document.getElementById("messageButtons").style.display = "flex";
+    document.getElementById("moreButtonContainer").style.display = "none"; // Hide More button container
+    document.getElementById("messageButtons").style.display = "flex"; // Display message buttons
 }
 
 function exitPage() {
@@ -34,7 +34,7 @@ function contactInfo() {
     const primaryEmail = 'deejay.cristobal@protonmail.com';
     const secondaryEmail = 'deejay.deejay.cristobal@protonmail.com';
     const emailBody = 'Hello,';
-    const email = `mailto:${primaryEmail},${secondaryEmail}?subject= Just a%20Message &body=${emailBody}`;
+    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=A%20Message&body=${emailBody}`;
     window.location.href = email;
 }
 
@@ -77,3 +77,12 @@ window.onclick = function(event) {
         imageModal.style.display = 'none';
     }
 }
+
+// Function to update the Philippine time and date
+function updateDateTime() {
+    const now = new Date();
+    const options = {
+        timeZone: 'Asia/Manila',
+        year: 'numeric',
+        month: 'long',
+        day:
