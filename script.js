@@ -32,7 +32,7 @@ function exitPage() {
 
 function contactInfo() {
     const primaryEmail = 'deejay.cristobal@protonmail.com';
-    const secondaryEmail = 'deejay.deejay.cristobal@protonmail.com';
+    const secondaryEmail = 'dheejaycristobal28@gmail.com';
     const emailBody = 'Hello,';
     const email = `mailto:${primaryEmail},${secondaryEmail}?subject=A%20Message&body=${emailBody}`;
     window.location.href = email;
