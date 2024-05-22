@@ -52,7 +52,8 @@ h1 {
 
 .reply img {
     border-radius: 4px;
-    width: 50%;
+    width: 100%; /* Ensure images take full width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .modal {
@@ -75,7 +76,7 @@ h1 {
 }
 
 .modal-content img {
-    max-width: 175%;
+    max-width: 100%;
     margin-bottom: 10px;
 }
 
