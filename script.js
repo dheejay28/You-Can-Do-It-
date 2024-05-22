@@ -1,65 +1,45 @@
-const message = "You can do it! Don't Give Up!";
-let index = 0;
-const typingSound = document.getElementById('typingSound');
-const typingDelay = 300; // Typing delay in milliseconds to span 9 seconds
+document.getElementById('continueBtn').addEventListener('click', function() {
+  const messageBox = document.getElementById('messageBox');
+  messageBox.classList.toggle('hidden');
+  typeWriterEffect("You can do it! Don't give up!", messageBox);
+  document.getElementById('typingSound').play(); // Autoplay typing sound
+});
 
-function revealMessage() {
-    document.getElementById("revealButton").style.display = "none";
-    document.getElementById("message").style.display = "block";
-    typeMessage();
-}
+document.getElementById('moreBtn').addEventListener('click', function() {
+  window.location.href = "mailto:your@email.com";
+});
 
-function typeMessage() {
-    if (index < message.length) {
-        document.getElementById("message").innerHTML += message.charAt(index);
-        typingSound.currentTime = 0; // Rewind to start
-        typingSound.play(); // Play sound
-        index++;
-        setTimeout(typeMessage, typingDelay);
-    } else {
-        document.getElementById("moreButtonContainer").style.display = "block"; // Display More button container
+document.getElementById('anonymousBtn').addEventListener('click', function() {
+  window.open("https://ngllink.com", "_blank");
+});
+
+document.getElementById('replyBtn').addEventListener('click', function() {
+  const modal = document.getElementById('replyModal');
+  const span = document.getElementsByClassName("close")[0];
+  modal.style.display = "block";
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
-}
+  }
+});
 
-function showMoreOptions() {
-    document.getElementById("moreButtonContainer").style.display = "none"; // Hide More button container
-    document.getElementById("messageButtons").style.display = "flex"; // Display message buttons
-    document.getElementById("messageButtons").style.flexDirection = "column"; // Align buttons vertically
-}
-
-function contactInfo() {
-    const primaryEmail = 'deejay.cristobal@protonmail.com';
-    const secondaryEmail = 'dheejaycristobal28@gmail.com';
-    const emailBody = 'Hello,';
-    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=Contact%20Information&body=${emailBody}`;
-    window.location.href = email;
-}
-
-function openNGL() {
-    const nglLink = 'https://ngl.link/deejay81979'; // Ensure the link is correctly formatted
-    window.open(nglLink, '_blank');
-}
-
-function openReplies() {
-    const modal = document.getElementById('replyModal');
-    modal.style.display = 'block';
-}
-
-function closeModal() {
-    const modal = document.getElementById('replyModal');
-    modal.style.display = 'none';
-}
-
-function showReply(imageSrc, text) {
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalText = document.getElementById('modalText');
-    modalImage.src = imageSrc;
-    modalText.textContent = text;
-    modal.style.display = 'block';
-}
-
-function closeImageModal() {
-    const modal = document.getElementById('imageModal');
-    modal.style.display = 'none';
+// Typewriter effect function
+function typeWriterEffect(text, targetElement) {
+  const typingDelay = 80; // milliseconds per character
+  let charIndex = 0;
+  const typingInterval = setInterval(() => {
+    if (charIndex < text.length) {
+      targetElement.innerHTML += text.charAt(charIndex);
+      charIndex++;
+      document.getElementById('typingSound').play(); // Play typing sound
+    } else {
+      clearInterval(typingInterval);
+    }
+  }, typingDelay);
 }
