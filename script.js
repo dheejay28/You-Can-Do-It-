@@ -1,7 +1,7 @@
 const message = "You can do it! Don't Give Up!";
 let index = 0;
 const typingSound = document.getElementById('typingSound');
-const typingDelay = 500; // Typing delay in milliseconds to span 9 seconds
+const typingDelay = 300; // Typing delay in milliseconds to span 9 seconds
 
 function revealMessage() {
     document.getElementById("revealButton").style.display = "none";
