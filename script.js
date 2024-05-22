@@ -77,15 +77,3 @@ window.onclick = function(event) {
         imageModal.style.display = 'none';
     }
 }
-
-// Function to update the Philippine time and date
-function updateDateTime() {
-    const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" });
-    document.getElementById('datetime').innerText = ' ${now}`;
-}
-
-// Update the date and time every second
-setInterval(updateDateTime, 1000);
-
-// Initial call to display the date and time immediately on load
-updateDateTime();
