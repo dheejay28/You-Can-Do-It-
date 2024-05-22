@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Page</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Can Do It!</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <button id="continueBtn">Continue</button>
-    <div id="messageBox" class="hidden"></div>
-    <button id="moreBtn">More</button>
-    <button id="anonymousBtn">Send me anonymous message</button>
-    <button id="replyBtn">Ngl Replies</button>
-    <div id="replyModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <img src="reply1.jpeg" alt="Reply1" class="reply-img">
-        <p class="reply-text">This is a sample reply.</p>
-      </div>
+    <div class="container">
+        <h1 id="message" style="display: none;"></h1>
+        <button id="revealButton" onclick="revealMessage()">Click me</button>
+        <div id="messageButtons" style="display: none;">
+            <button id="contactButton" onclick="contactInfo()">Message Me</button>
+            <button id="nglButton" onclick="openNGL()">Send Me Anonymous Message</button>
+            <button id="repliesButton" onclick="openReplies()">See More</button>
+        </div>
     </div>
-  </div>
-
-  <audio id="typingSound" src=Ttyping_Sound.mp3"></audio>
-  <script src="script.js"></script>
+    <audio id="typingSound" src="Typing-Sound.mp3" preload="auto"></audio>
+    <div id="replyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Replies</h2>
+            <div class="reply-gallery">
+                <div class="reply" onclick="showReply('reply1.jpeg', 'This is the text for reply 1. It can be a brief description or an actual reply.')">
+                    <img src="reply1.jpeg" alt="Reply 1">
+                    <p>This is the text for reply 1. It can be a brief description or an actual reply.</p>
+                </div>
+                <div class="reply" onclick="showReply('reply2.jpeg', 'This is the text for reply 2. It can be a brief description or an actual reply.')">
+                    <img src="reply2.jpeg" alt="Reply 2">
+                    <p>This is the text for reply 2. It can be a brief description or an actual reply.</p>
+                </div>
+                <div class="reply" onclick="showReply('reply3.jpeg', 'This is the text for reply 3. It can be a brief description or an actual reply.')">
+                    <img src="reply3.jpeg" alt="Reply 3">
+                    <p>This is the text for reply 3. It can be a brief description or an actual reply.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="Reply Image">
+            <p id="modalText"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
