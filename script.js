@@ -34,12 +34,12 @@ function contactInfo() {
     const primaryEmail = 'deejay.cristobal@protonmail.com';
     const secondaryEmail = 'dheejaycristobal28@gmail.com';
     const emailBody = 'Hello,';
-    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=A%20Message&body=${emailBody}`;
+    const email = `mailto:${primaryEmail},${secondaryEmail}?subject=Contact%20Me&body=${emailBody}`;
     window.location.href = email;
 }
 
 function openNGL() {
-    window.open('https://ngl.link/deejay81979', '_blank');
+    window.open('https://ngl.com/dj28', '_blank');
 }
 
 function openReplies() {
@@ -80,9 +80,12 @@ window.onclick = function(event) {
 
 // Function to update the Philippine time and date
 function updateDateTime() {
-    const now = new Date();
-    const options = {
-        timeZone: 'Asia/Manila',
-        year: 'numeric',
-        month: 'long',
-        day:
+    const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" });
+    document.getElementById('datetime').innerText = `Current Philippine Date and Time: ${now}`;
+}
+
+// Update the date and time every second
+setInterval(updateDateTime, 1000);
+
+// Initial call to display the date and time immediately on load
+updateDateTime();
